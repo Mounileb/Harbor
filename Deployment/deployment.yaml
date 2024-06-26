@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: web-container
-        image: 10.38.91.61/library/harbor_cicd:v5
+        image: demaksac.azurecr.io/mounilebharbor:65
         ports:
         - containerPort: 80
