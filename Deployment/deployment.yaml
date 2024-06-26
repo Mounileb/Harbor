@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: web-container
-        image: demaksac.azurecr.io/mounilebharbor:65
+        image: demaksac.azurecr.io/mounilebharbor:69
         ports:
         - containerPort: 80
