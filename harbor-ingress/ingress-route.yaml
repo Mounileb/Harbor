@@ -11,11 +11,24 @@ spec:
   rules:
   - http:
       paths:
-      - path: /aks-harbor(/|$)(.*)
+      - path: /harbor-world-one(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name:aks-harbor
+            port:
+              number: 80
+      - path: /harbor-world-two(/|$)(.*)
         pathType: Prefix
         backend:
           service:
             name: aks-harbor
             port:
               number: 80
-      
+      - path: /(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: aks-harbor
+            port:
+              number: 80
